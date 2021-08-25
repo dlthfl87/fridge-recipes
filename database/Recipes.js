@@ -4,6 +4,7 @@ const db = require('./index');
 const Schema = mongoose.Schema;
 
 const recipesSchema = new Schema({
+  id: Number,
   image: String,
   title: String,
   time: Number,
