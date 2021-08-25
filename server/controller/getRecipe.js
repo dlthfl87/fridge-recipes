@@ -1,7 +1,7 @@
 const config = require('../config');
 const axios = require('axios');
 const Recipes = require('../../database/Recipes.js');
-// const sampleData = require('../../database/sampleData.js');
+const sampleData = require('../../database/sampleData.js');
 const mongoose = require('mongoose');
 
 module.exports = {
@@ -16,21 +16,33 @@ module.exports = {
       addRecipeInformation: true,
     }
   })
-    .then(async (response) => {
-      response.data.results.forEach(async (recipe) => {
-        const foodRecipe = new Recipes({
-          id: recipe.id,
-          image: recipe.image,
-          title: recipe.title,
-          time: recipe.readyInMinutes,
-          missingIngredients: recipe.missedIngredientCount,
-          likes: recipe.aggregateLikes,
+  .then((response) => {
+    return response.data.results.map((recipe) => {
+    const recipeObj = {
+    id: recipe.id,
+    image: recipe.image,
+    title: recipe.title,
+    time: recipe.readyInMinutes,
+    missingIngredients: recipe.missedIngredientCount,
+    likes: recipe.aggregateLikes,
+    }
+    return recipeObj;
+  })
+})
+  .then((recipes) => {
+    console.log(recipes)
+    Recipes.insertMany(recipes, function (err) {
+      if (err) {
+            return handleError(err);
+      } else {
+        Recipes.find((err, response) => {
+          if (err) res.status(404).send('failed');
+          else {
+            res.status(200).send(response);
+          }
         })
-        await foodRecipe.save();
-      })
-      await Recipes.find()
-        .then((data) => res.status(200).send(data))
-        .catch((err) => res.status(404).send('failed'))
+      }
     })
+  })
   }
 }

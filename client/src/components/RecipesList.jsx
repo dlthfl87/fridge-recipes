@@ -12,9 +12,9 @@ export default class RecipesList extends React.Component {
           <div key={recipe.id}>
           <img src={recipe.image} />
           <div>{recipe.title}</div>
-          <div>{recipe.readyInMinutes} Mins</div>
-          <div>Need {recipe.missedIngredientCount} More Ingredients</div>
-          <div>{recipe.aggregateLikes} Likes </div>
+          <div>{recipe.time} Mins</div>
+          <div>Need {recipe.missingIngredients} More Ingredients</div>
+          <div>{recipe.likes} Likes </div>
           </div>
         ))}
       </div>
