@@ -1,7 +1,7 @@
 const config = require('../config');
 const axios = require('axios');
 const Recipes = require('../../database/Recipes.js');
-const sampleData = require('../../database/sampleData.js');
+// const sampleData = require('../../database/sampleData.js');
 const mongoose = require('mongoose');
 
 module.exports = {
@@ -11,7 +11,7 @@ module.exports = {
       apiKey: config.apiKey,
       includeIngredients: req.query.ingredients,
       ignorePantry: true,
-      number: 3,
+      number: 8,
       sort: 'max-used-ingredients',
       addRecipeInformation: true,
     }
@@ -38,9 +38,10 @@ module.exports = {
         Recipes.find((err, response) => {
           if (err) res.status(404).send('failed');
           else {
+
             res.status(200).send(response);
           }
-        })
+        }).sort({ missingIngredients: 'asc'})
       }
     })
   })
