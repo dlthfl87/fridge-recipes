@@ -3,14 +3,15 @@ const axios = require('axios');
 
 module.exports = {
   get: (req, res) => {
-    console.log(req.query)
   axios.get(config.url, {
       params: {
         apiKey: config.apiKey,
         includeIngredients: req.query.ingredients,
         ignorePantry: true,
-        number: 1,
-        sort: 'min-missing-ingredients',
+        number: 10,
+        // sort: 'min-missing-ingredients',
+        sort: 'max-used-ingredients',
+        addRecipeInformation: true,
       }
   })
   .then((response) => res.status(200).json(response.data.results))
