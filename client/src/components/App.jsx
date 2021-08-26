@@ -8,14 +8,14 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      recipes: [...data],
-      ingredients: '',
+      recipes: [],
+      // ingredients: '',
       view: 'main',
       recipeId: '',
       currentRecipe: {},
       ingredientList: [],
     }
-    this.insertText = this.insertText.bind(this);
+    // this.insertText = this.insertText.bind(this);
     this.submitButton = this.submitButton.bind(this);
     this.changeView = this.changeView.bind(this);
     this.renderView = this.renderView.bind(this);
@@ -43,7 +43,8 @@ export default class App extends React.Component {
 
   submitButton(e) {
     e.preventDefault();
-    axios.get('/api/recipes', { params: {ingredients: this.state.ingredients }})
+    const ingredientString = this.state.ingredientList.join(', ')
+    axios.get('/api/recipes', { params: {ingredients: ingredientString }})
     .then((response) => {
       this.setState({
         recipes: [...response.data]
@@ -52,53 +53,18 @@ export default class App extends React.Component {
     .catch((err) => console.log(err))
   }
 
-  insertText(e) {
-    this.setState({
-      ingredients: e.target.value
-    })
-  }
+  // insertText(e) {
+  //   this.setState({
+  //     ingredients: e.target.value
+  //   })
+  // }
 
   renderView() {
     if (this.state.view === 'main') {
-      return  < RecipesList changeView={this.changeView} list={this.state.recipes}/>
-    } else if (this.state.view === 'recipe') {
-      return <Recipe recipe={this.state.currentRecipe}/>
-    }
-  }
-
-  handleInputChange(e){
-    const target = e.target;
-    const name = target.name;
-
-    if (this.state[name] === undefined || this.state[name] === false) {
-      this.setState({
-        [name]: e.target.checked,
-        ingredientList: [name, ...this.state.ingredientList]
-      })
-    } else if (this.state[name] === true) {
-      this.setState({
-        [name]: e.target.checked,
-        ingredientList: this.state.ingredientList.filter(e => e !== name)
-      })
-    }
-  }
-
-  render() {
-    return (
+      return  (
       <div>
-        <h1>Happy Fridge</h1>
+        < RecipesList changeView={this.changeView} list={this.state.recipes}/>
         <form onSubmit={this.submitButton}>
-          <label htmlFor="ingredients">Ingredients:
-          <input onChange={this.insertText} name="ingredients" placeholder="for more than 1, add ', '"></input>
-          </label>
-          <button>Submit</button>
-
-          <div>
-            {this.renderView()}
-          </div>
-        </form>
-
-        <form>
             <h1>Ingredients:</h1>
             <h2>Vegetables</h2>
 
@@ -362,7 +328,48 @@ export default class App extends React.Component {
             </input>
           </label>
 
+          <br></br><br></br>
+          <button>Find Recipe</button>
         </form>
+      </div>
+      )
+    } else if (this.state.view === 'recipe') {
+      return <Recipe recipe={this.state.currentRecipe}/>
+    }
+  }
+
+  handleInputChange(e){
+    const target = e.target;
+    const name = target.name;
+
+    if (this.state[name] === undefined || this.state[name] === false) {
+      this.setState({
+        [name]: e.target.checked,
+        ingredientList: [name, ...this.state.ingredientList]
+      })
+    } else if (this.state[name] === true) {
+      this.setState({
+        [name]: e.target.checked,
+        ingredientList: this.state.ingredientList.filter(e => e !== name)
+      })
+    }
+
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Happy Fridge</h1>
+        {/* <form onSubmit={this.submitButton}>
+          <label htmlFor="ingredients">Ingredients:
+          <input onChange={this.insertText} name="ingredients" placeholder="for more than 1, add ', '"></input>
+          </label>
+          <button>Submit</button>
+        </form> */}
+
+          <div>
+            {this.renderView()}
+          </div>
       </div>
     )
   }

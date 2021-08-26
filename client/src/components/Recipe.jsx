@@ -19,7 +19,7 @@ export default class Recipe extends React.Component {
         <div>{this.props.recipe.dairyFree}dairyFree</div>
         <div>{this.props.recipe.servings} Servings</div>
         <div>{this.props.recipe.summary}</div>
-        <div>{this.props.recipe.instructions}</div>
+        {/* <div>{this.props.recipe.instructions}</div> */}
       </div>
     )
   }

@@ -32,7 +32,7 @@ module.exports = {
     dairyFree: recipe.dairyFree,
     servings: recipe.servings,
     summary: recipe.summary.replace(/<[^>]*>?/gm, ''),
-    instructions: recipe.analyzedInstructions,
+    // instructions: recipe.analyzedInstructions,
     sourceName: recipe.sourceName
     }
     return recipeObj;
