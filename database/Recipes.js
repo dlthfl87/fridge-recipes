@@ -17,6 +17,7 @@ const recipesSchema = new Schema({
   servings: Number,
   summary: String,
   instructions: Array,
+  sourceName: String,
 })
 
 const Recipes = mongoose.model('Recipe', recipesSchema);

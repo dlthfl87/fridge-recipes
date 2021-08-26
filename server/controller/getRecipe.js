@@ -15,7 +15,6 @@ module.exports = {
       sort: 'max-used-ingredients',
       addRecipeInformation: true,
       instructionsRequired: true,
-      addRecipeNutrition: true,
     }
   })
   .then((response) => {
@@ -33,7 +32,8 @@ module.exports = {
     dairyFree: recipe.dairyFree,
     servings: recipe.servings,
     summary: recipe.summary.replace(/<[^>]*>?/gm, ''),
-    instructions: recipe.analyzedInstructions.steps,
+    instructions: recipe.analyzedInstructions,
+    sourceName: recipe.sourceName
     }
     return recipeObj;
   })

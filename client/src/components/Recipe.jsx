@@ -11,7 +11,8 @@ export default class Recipe extends React.Component {
       <div>
         <img src={this.props.recipe.image} />
         <div>{this.props.recipe.title}</div>
-        <div>{this.props.recipe.time} Mins to cook</div>
+        <div>by {this.props.recipe.sourceName}</div>
+        <div>Prep time {this.props.recipe.time} Mins </div>
         <div>{this.props.recipe.vegan} Vegan</div>
         <div>{this.props.recipe.vegetarian} vegetarian</div>
         <div>{this.props.recipe.glutenFree} glutenFree</div>
