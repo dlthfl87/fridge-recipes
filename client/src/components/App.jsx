@@ -63,7 +63,6 @@ export default class App extends React.Component {
     if (this.state.view === 'main') {
       return  (
       <div>
-        < RecipesList changeView={this.changeView} list={this.state.recipes}/>
         <form onSubmit={this.submitButton}>
             <h2>Ingredients:</h2>
             <h3>Vegetables</h3>
@@ -331,6 +330,7 @@ export default class App extends React.Component {
           <br></br><br></br>
           <button>Find Recipe</button>
         </form>
+        < RecipesList changeView={this.changeView} list={this.state.recipes}/>
       </div>
       )
     } else if (this.state.view === 'recipe') {

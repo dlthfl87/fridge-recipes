@@ -18,15 +18,15 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
-  Fridge Recipes
+  Happy Fridge
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
-  Welcomes all beginner, intermediate, and seasoned cooks that in addition to cooking a tasty meal, want to save time, money, and reduce methane gas emissions.
+  Welcomes all beginner, intermediate, and seasoned cooks that are looking to reduce food waste but our of recipe options.
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
-  Fridge Recipes provides a solution to eliminating food waste and reducing the environmental impact that food waste has on our climate. According to U.N. Food and Agriculture Organization, 30 percent of food is wasted globally across the supply chain, contributing to 8 percent of total global greenhouse gas emissions. Our mission is to help our users make conscientious decisions by offering a variety of tasty, sustainable recipe options with ingredients that you already have in stock. We want to empower our users to make active decisions in reducing food waste, taking active steps in reducing their impact on climate change crisis, while saving time and money in the process.
+  Happy Fridge provides a solution to reducing food waste and  the environmental impact that food waste has on our climate. According to U.N. Food and Agriculture Organization, 30 percent of food is wasted globally across the supply chain. Food waste accounts for about 8 percent of total global greenhouse gas emissions. Our mission is to help our users make conscientious decisions by offering a variety of tasty, sustainable recipe options using ingredients that users already have in stock. We want to empower our users to make active decisions in reducing food waste, reducing their impact on climate change crisis, while saving time and money in the process.
 
 ## Problem ##
   > Describe the problem your product solves.
@@ -38,7 +38,7 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
-Tired of throwing out all the rotten ingredients from your last grocery haul? Do you care about making sustainable choices for the environment? Save time, money, and lower your environmental impact by cooking your meals using Fridge Recipes.
+Tired of throwing out all the rotten ingredients from your last grocery haul? Do you care about making sustainable choices for the environment? Save time, money, and lower your environmental impact by cooking your meals using Happy Fridge.
 
 
 ## How to Get Started ##
