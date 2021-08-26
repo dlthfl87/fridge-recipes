@@ -12,6 +12,7 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #333;
   line-height: 1.6;
+  background-color: #F0EBF4;
 }
 
 h1, h2, h3 {
@@ -56,11 +57,12 @@ img {
 
 .thumbnails {
   height: 880px;
-  background-color: #F0EBF4;
+  /* background-color: #F0EBF4; */
   color: #333;
   position: relative;
   display: flex;
   justify-content: space-between;
+  overflow: auto;
 }
 
 .thumbnails h1 {

@@ -12,7 +12,7 @@ export default class Recipe extends React.Component {
   }
 
   vegan(boolean) {
-    if (boolean) {
+    if (boolean === true) {
       return <i class="fab fa-vine"></i>
     }
   }
@@ -30,18 +30,20 @@ export default class Recipe extends React.Component {
         <h3>by {this.props.recipe.sourceName}</h3>
         <div className="description">
         <img className="image" src={this.props.recipe.image} />
-        <div>{this.props.recipe.summary}</div>
+        <div className="summary">{this.props.recipe.summary}</div>
         </div>
-        <h3>Prep time {this.props.recipe.time} Mins </h3>
+        <h3>Prep time: {this.props.recipe.time} Mins </h3>
+        <h3>{this.props.recipe.servings} Servings</h3>
         {this.vegan(this.props.recipe.vegan)}
         {this.vegetarian(this.props.recipe.vegetarian)}
         {this.gluten(this.props.recipe.glutenFree)}
-        <h3>{this.props.recipe.servings} Servings</h3>
+        <h3>Ingredients</h3>
         <div className="ingredients">
         {this.props.recipe.ingredients.map((ingredient, index) => {
           return <div className="ingredient" key={index}>{ingredient}</div>
         })}
         </div>
+        <h3>Instructions</h3>
         <div className="rows">
         </div>
         {this.props.recipe.instructions.map((instruction, index) => {
