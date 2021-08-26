@@ -19,7 +19,12 @@ export default class Recipe extends React.Component {
         <div>{this.props.recipe.dairyFree}dairyFree</div>
         <div>{this.props.recipe.servings} Servings</div>
         <div>{this.props.recipe.summary}</div>
-        {/* <div>{this.props.recipe.instructions}</div> */}
+        {this.props.recipe.ingredients.map((ingredient, index) => {
+          return <div key={index}>{ingredient}</div>
+        })}
+        {this.props.recipe.instructions.map((instruction, index) => {
+          return <div key={`i-${index}`}>{instruction}</div>
+        })}
       </div>
     )
   }

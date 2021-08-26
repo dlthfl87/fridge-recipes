@@ -92,18 +92,7 @@ module.exports = {
                                 "image": "salt.jpg"
                             }
                         ],
-                        "equipment": [
-                            {
-                                "id": 404783,
-                                "name": "bowl",
-                                "localizedName": "bowl",
-                                "image": "bowl.jpg"
-                            }
-                        ],
-                        "length": {
-                            "number": 30,
-                            "unit": "minutes"
-                        }
+
                     },
                     {
                         "number": 2,
@@ -116,14 +105,7 @@ module.exports = {
                                 "image": "pico-de-gallo.png"
                             }
                         ],
-                        "equipment": [
-                            {
-                                "id": 404783,
-                                "name": "bowl",
-                                "localizedName": "bowl",
-                                "image": "bowl.jpg"
-                            }
-                        ]
+
                     },
                     {
                         "number": 3,
@@ -142,7 +124,7 @@ module.exports = {
                                 "image": "lime-juice.png"
                             }
                         ],
-                        "equipment": []
+
                     },
                     {
                         "number": 4,

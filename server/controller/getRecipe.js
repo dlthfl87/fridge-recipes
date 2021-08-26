@@ -11,7 +11,7 @@ module.exports = {
       apiKey: config.apiKey,
       includeIngredients: req.query.ingredients,
       ignorePantry: true,
-      number: 8,
+      number: 1,
       sort: 'max-used-ingredients',
       addRecipeInformation: true,
       instructionsRequired: true,
@@ -19,6 +19,18 @@ module.exports = {
   })
   .then((response) => {
     return response.data.results.map((recipe) => {
+
+    const ingredients = [];
+    const instructions = [];
+    recipe.analyzedInstructions.forEach(instruction => {
+      instruction.steps.forEach(step => {
+        instructions.push(step.step)
+        step.ingredients.forEach(ingredient => {
+          ingredients.push(ingredient.name)
+        })
+      })
+    })
+
     const recipeObj = {
     id: recipe.id,
     image: recipe.image,
@@ -32,7 +44,8 @@ module.exports = {
     dairyFree: recipe.dairyFree,
     servings: recipe.servings,
     summary: recipe.summary.replace(/<[^>]*>?/gm, ''),
-    // instructions: recipe.analyzedInstructions,
+    instructions: instructions,
+    ingredients: ingredients,
     sourceName: recipe.sourceName
     }
     return recipeObj;

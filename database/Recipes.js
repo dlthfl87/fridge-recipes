@@ -17,6 +17,7 @@ const recipesSchema = new Schema({
   servings: Number,
   summary: String,
   instructions: Array,
+  ingredients: Array,
   sourceName: String,
 })
 

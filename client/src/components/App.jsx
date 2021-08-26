@@ -46,6 +46,7 @@ export default class App extends React.Component {
     const ingredientString = this.state.ingredientList.join(', ')
     axios.get('/api/recipes', { params: {ingredients: ingredientString }})
     .then((response) => {
+      console.log(response.data)
       this.setState({
         recipes: [...response.data]
       })
