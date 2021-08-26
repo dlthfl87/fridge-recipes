@@ -13,7 +13,6 @@ const recipesSchema = new Schema({
   vegan: Boolean,
   vegetarian: Boolean,
   glutenFree: Boolean,
-  dairyFree: Boolean,
   servings: Number,
   summary: String,
   instructions: Array,

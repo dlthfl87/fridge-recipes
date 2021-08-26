@@ -41,7 +41,6 @@ module.exports = {
     vegan: recipe.vegan,
     vegetarian: recipe.vegetarian,
     glutenFree: recipe.glutenFree,
-    dairyFree: recipe.dairyFree,
     servings: recipe.servings,
     summary: recipe.summary.replace(/<[^>]*>?/gm, ''),
     instructions: instructions,

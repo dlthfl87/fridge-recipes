@@ -7,7 +7,8 @@ export default class RecipesList extends React.Component {
 
   render() {
     return (
-      <div className="recipe-thumbnail">
+      <div className="thumbnails">
+        <div className="container grid">
         {this.props.list.map(recipe => (
           <div
             id={recipe.id}
@@ -17,11 +18,11 @@ export default class RecipesList extends React.Component {
             id={recipe.id}
             src={recipe.image}
             onClick={(e) => this.props.changeView(e)}/>
-          <div
+          <h2
             id={recipe.id}
             onClick={(e) => this.props.changeView(e)}>
               {recipe.title}
-          </div>
+          </h2>
           <div
             id={recipe.id}
             onClick={(e) => this.props.changeView(e)}>
@@ -30,7 +31,7 @@ export default class RecipesList extends React.Component {
           <div
           id={recipe.id}
           onClick={(e) => this.props.changeView(e)}>
-            Need {recipe.missingIngredients} More Ingredients
+            Needs {recipe.missingIngredients} More Ingredients
           </div>
           <div
           id={recipe.id}
@@ -39,6 +40,7 @@ export default class RecipesList extends React.Component {
           </div>
           </div>
         ))}
+        </div>
       </div>
     )
   }

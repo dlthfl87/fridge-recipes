@@ -1,5 +1,101 @@
-.recipe-thumbnail {
+:root {
+  --primary-color: #B39BC8;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+.header {
+  background-color: var(--primary-color);
+  color: #333;
+  padding: 20px;
+  height: 70px;
+}
+
+.header h1 {
+  color:#F0EBF4;
+}
+
+.container {
+  max-width: 1100px;
+  max-height: 450px;
+  margin: 0 auto;
+  /* overflow: auto; */
+  padding: 0 40px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%
+}
+
+.thumbnails {
+  height: 880px;
+  background-color: #F0EBF4;
+  color: #333;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.thumbnails h1 {
+  font-size: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+input, .ingredient {
+  margin-right: 15px;
+}
+
+img .image {
+  width: 40%;
+  padding: 5px;
+}
+
+.ingredients {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+}
+
+.description {
+  display: flex;
+  flex-direction: row;
+}
+
+.summary {
+  margin: 10px;
+  padding: 5px;
 }

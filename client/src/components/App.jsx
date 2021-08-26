@@ -8,7 +8,7 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      recipes: [],
+      recipes: [...data],
       // ingredients: '',
       view: 'main',
       recipeId: '',
@@ -46,7 +46,6 @@ export default class App extends React.Component {
     const ingredientString = this.state.ingredientList.join(', ')
     axios.get('/api/recipes', { params: {ingredients: ingredientString }})
     .then((response) => {
-      console.log(response.data)
       this.setState({
         recipes: [...response.data]
       })
@@ -66,8 +65,8 @@ export default class App extends React.Component {
       <div>
         < RecipesList changeView={this.changeView} list={this.state.recipes}/>
         <form onSubmit={this.submitButton}>
-            <h1>Ingredients:</h1>
-            <h2>Vegetables</h2>
+            <h2>Ingredients:</h2>
+            <h3>Vegetables</h3>
 
             <label>
             potato
@@ -198,7 +197,7 @@ export default class App extends React.Component {
             </input>
           </label>
 
-          <h2>Fruits</h2>
+          <h3>Fruits</h3>
 
             <label>
             lime
@@ -359,8 +358,10 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Happy Fridge</h1>
+      <div className="header">
+        <div className="container">
+        <h1 className="logo">Happy Fridge</h1>
+        </div>
         {/* <form onSubmit={this.submitButton}>
           <label htmlFor="ingredients">Ingredients:
           <input onChange={this.insertText} name="ingredients" placeholder="for more than 1, add ', '"></input>
