@@ -1,14 +1,14 @@
 import React from 'react';
 import axios from 'axios';
 import RecipesList from './RecipesList.jsx';
-import data from '../data.js';
+// import data from '../data.js';
 import Recipe from './Recipe.jsx';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      recipes: [...data],
+      recipes: [],
       // ingredients: '',
       view: 'main',
       recipeId: '',
