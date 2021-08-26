@@ -9,12 +9,34 @@ export default class RecipesList extends React.Component {
     return (
       <div className="recipe-thumbnail">
         {this.props.list.map(recipe => (
-          <div key={recipe.id}>
-          <img src={recipe.image} />
-          <div>{recipe.title}</div>
-          <div>{recipe.time} Mins</div>
-          <div>Need {recipe.missingIngredients} More Ingredients</div>
-          <div>{recipe.likes} Likes </div>
+          <div
+            id={recipe.id}
+            key={recipe.id}
+            onClick={(e) => this.props.changeView(e)}>
+          <img
+            id={recipe.id}
+            src={recipe.image}
+            onClick={(e) => this.props.changeView(e)}/>
+          <div
+            id={recipe.id}
+            onClick={(e) => this.props.changeView(e)}>
+              {recipe.title}
+          </div>
+          <div
+            id={recipe.id}
+            onClick={(e) => this.props.changeView(e)}>
+              {recipe.time} Mins
+          </div>
+          <div
+          id={recipe.id}
+          onClick={(e) => this.props.changeView(e)}>
+            Need {recipe.missingIngredients} More Ingredients
+          </div>
+          <div
+          id={recipe.id}
+          onClick={(e) => this.props.changeView(e)}>
+            {recipe.likes} Likes
+          </div>
           </div>
         ))}
       </div>

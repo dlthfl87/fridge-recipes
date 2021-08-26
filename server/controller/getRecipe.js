@@ -14,6 +14,8 @@ module.exports = {
       number: 8,
       sort: 'max-used-ingredients',
       addRecipeInformation: true,
+      instructionsRequired: true,
+      addRecipeNutrition: true,
     }
   })
   .then((response) => {
@@ -25,6 +27,13 @@ module.exports = {
     time: recipe.readyInMinutes,
     missingIngredients: recipe.missedIngredientCount,
     likes: recipe.aggregateLikes,
+    vegan: recipe.vegan,
+    vegetarian: recipe.vegetarian,
+    glutenFree: recipe.glutenFree,
+    dairyFree: recipe.dairyFree,
+    servings: recipe.servings,
+    summary: recipe.summary.replace(/<[^>]*>?/gm, ''),
+    instructions: recipe.analyzedInstructions.steps,
     }
     return recipeObj;
   })

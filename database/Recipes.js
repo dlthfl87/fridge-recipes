@@ -10,6 +10,13 @@ const recipesSchema = new Schema({
   time: Number,
   missingIngredients: Number,
   likes: Number,
+  vegan: Boolean,
+  vegetarian: Boolean,
+  glutenFree: Boolean,
+  dairyFree: Boolean,
+  servings: Number,
+  summary: String,
+  instructions: Array,
 })
 
 const Recipes = mongoose.model('Recipe', recipesSchema);
