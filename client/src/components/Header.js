@@ -2,6 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Header () {
+  window.addEventListener("resize", checkWindowSize);
+
+  function checkWindowSize() {
+    if (window.innerWidth >= 750) {
+      closeNav();
+    }
+  }
+
   function setActive(page) {
     document.querySelector('.active').classList.remove('active');
     document.querySelector(`.${page}`).classList.add('active')

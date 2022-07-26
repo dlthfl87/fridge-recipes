@@ -19,7 +19,7 @@ export default function useFetch(query, pageNumber) {
       offset: (pageNumber - 1) * 6
     }}).then(res => {
       setRecipes(prevRecipe => {
-        return [...prevRecipe, ...res.data];
+        return [...new Set([...prevRecipe, ...res.data])];
       })
       setHasMore(res.data.length > 0);
       setLoading(false);

@@ -27,7 +27,7 @@
     "babel-loader": "^8.2.2",
     "css-loader": "^6.2.0",
     "mongodb": "^4.7.0",
-    "mongoose": "^6.4.4",
+    "mongoose": "^6.4.7",
     "react-bootstrap": "^2.4.0",
     "react-icons": "^4.4.0",
     "react-infinite-scroll-component": "^6.1.0",

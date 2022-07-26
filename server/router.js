@@ -4,6 +4,7 @@ const router = express.Router();
 
 router
   .get('/recipes', controller.getAll)
-  .get('/recipes/:recipeId', controller.findRecipe);
+  .get('/recipes/:recipeId', controller.findRecipe)
+  .delete('/recipes', controller.deleteAll)
 
 module.exports = router;

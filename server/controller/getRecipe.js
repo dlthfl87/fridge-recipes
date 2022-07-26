@@ -48,12 +48,9 @@ module.exports = {
       })
     })
     .then((recipes) => {
-      Recipes.deleteMany({}, function (err) {
-        if (err) return handleError(err)
-      })
       Recipes.insertMany(recipes, function (err) {
         if (err) {
-          return handleError(err);
+          res.status(404)
         } else {
           Recipes.find((err, response) => {
             if (err) {
@@ -61,7 +58,8 @@ module.exports = {
             } else {
               res.status(200).send(response);
             }
-          }).sort({ missingIngredients: 'asc'})
+          })
+          .sort({ missingIngredients: 'asc'})
         }
       })
     })
@@ -76,5 +74,14 @@ module.exports = {
       .catch(err => {
         res.status(404).send('could not find posts', err)
       })
+  },
+  deleteAll: (req, res) => {
+    Recipes.deleteMany({})
+    .then(function() {
+      console.log('data deleted');
+      res.status(200)
+    }).catch(err => {
+      res.status(400)
+    })
   }
 }

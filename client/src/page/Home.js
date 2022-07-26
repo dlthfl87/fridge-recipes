@@ -1,9 +1,10 @@
-import React, { useState, useRef, useCallback} from 'react';
+import React, { useState, useEffect, useRef, useCallback} from 'react';
 import { Link } from 'react-router-dom';
 import { IoTimerOutline } from 'react-icons/io5';
 
 export default function Home (props) {
   const observer = useRef(null);
+
   const lastRecipe = useCallback(node => {
     if (props.loading) return;
     if (observer.current) observer.current.disconnect();
@@ -21,9 +22,6 @@ export default function Home (props) {
 
   return (
     <main className="recipe-page">
-      <button className="scroll-btn">
-        Back to Top
-      </button>
       <h2 className="recipes-list-title">Recommended Recipes for You</h2>
       <div className="recipes-list">
           {props.recipes.map((recipe, index) => {

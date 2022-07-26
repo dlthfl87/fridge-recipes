@@ -51,6 +51,11 @@ export default function App () {
     return checkedItems.join(', ')
   }
 
+  function resetData() {
+    axios.delete('/recipes')
+    .catch(err => console.log(err))
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
     setPageNumber(1);
@@ -58,6 +63,7 @@ export default function App () {
 
     //closes sidebar after submitting the find recipe button
     document.body.classList.remove('open-sidebar');
+    resetData();
   }
 
 

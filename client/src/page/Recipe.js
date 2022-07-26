@@ -6,7 +6,6 @@ export default function Recipe () {
   const {recipeId} = useParams();
   const [currentRecipe, setCurrentRecipe] = useState();
 
-
   useEffect(() => {
     axios.get(`/recipes/${recipeId}`)
       .then(response => {
