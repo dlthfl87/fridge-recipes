@@ -15,9 +15,9 @@
   "author": "Soli Anna Lee",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/leesoli/fridge-recipes/issues"
+    "url": "https://github.com/leesoli/happy-fridge-version2.0/issues"
   },
-  "homepage": "https://github.com/leesoli/fridge-recipes",
+  "homepage": "https://github.com/leesoli/happy-fridge-version2.0",
   "devDependencies": {
     "@babel/cli": "^7.14.8",
     "@babel/core": "^7.15.0",
