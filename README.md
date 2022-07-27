@@ -6,7 +6,7 @@ With Happy Fridge, you can do your part to help reduce the environmental impact 
 ### Configuration
 To run Happy Fridge locally, fork and clone this repository to your own local directory.
 
-You will need to use the [Spoonacular API](https://spoonacular.com/food-api/console#Dashboard) to generate a private key. After signing up, find the API key in your console and insert private key in config.js file.
+You will need to use the [Spoonacular API](https://spoonacular.com/food-api/console#Dashboard) to generate a private key. After signing up, find the API key in your console and insert your private key into the config.js file.
 
 ### Start the server
 To start the server, run:
@@ -19,7 +19,7 @@ npm build
 ## Navigating the Application
 On the homepage, click on the Find Recipe button on the middle of the screen or Recipe on the menu bar to display the sidebar. Choose all the ingredients you have on hand with the exception of pantry items.
 
-Once you have made your selection, click the Find Recipe button.
+Once you have made your selection, scroll down and click on the Find Recipe button.
 
 Based on the ingredients you have chosen, you will be given a list of recipes in the order of the least additional ingredients needed.
 
