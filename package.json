@@ -1,5 +1,5 @@
 {
-  "name": "happy-fridge",
+  "name": "happy-fridge-version2.0",
   "version": "2.0.0",
   "description": "This product offers a solution to reducing food waste and the environmental impact we make by offering a variety of recipes options based on the ingredients you have stocked in your home.",
   "main": "server/index.js",
