@@ -15,9 +15,9 @@
   "author": "Soli Anna Lee",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dlthfl87/fridge-recipes/issues"
+    "url": "https://github.com/leesoli/fridge-recipes/issues"
   },
-  "homepage": "https://github.com/dlthfl87/fridge-recipes#readme",
+  "homepage": "https://github.com/leesoli/fridge-recipes",
   "devDependencies": {
     "@babel/cli": "^7.14.8",
     "@babel/core": "^7.15.0",
