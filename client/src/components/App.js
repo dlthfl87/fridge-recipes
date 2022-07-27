@@ -30,6 +30,7 @@ export default function App () {
 
   function handleChange(e) {
     const {id, name, checked} = e.target;
+
     setFormData(prevFormData => ({
       ...prevFormData,
       [name]: {
@@ -48,22 +49,21 @@ export default function App () {
         checkedItems.push(item);
       }
     }
-    return checkedItems.join(', ')
+    return checkedItems.join(', ');
   }
 
   function resetData() {
-    axios.delete('/recipes')
-    .catch(err => console.log(err))
+    axios.delete('/recipes').catch(err => console.log(err));
   }
 
   function handleSubmit(event) {
     event.preventDefault();
     setPageNumber(1);
     setQuery(findString());
+    resetData();
 
     //closes sidebar after submitting the find recipe button
     document.body.classList.remove('open-sidebar');
-    resetData();
   }
 
 
@@ -76,7 +76,6 @@ export default function App () {
         handleChange={handleChange}
         formData={formData}/>
       <Routes>
-
         <Route
           exact path='/'
           element={<Home

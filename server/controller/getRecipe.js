@@ -16,8 +16,7 @@ module.exports = {
         addRecipeInformation: true,
         instructionsRequired: true,
       }
-    })
-    .then((response) => {
+    }).then((response) => {
       return response.data.results.map((recipe) => {
         const ingredients = [];
         const instructions = [];
@@ -46,11 +45,10 @@ module.exports = {
         }
         return recipeObj;
       })
-    })
-    .then((recipes) => {
+    }).then((recipes) => {
       Recipes.insertMany(recipes, function (err) {
         if (err) {
-          res.status(404)
+          res.status(404);
         } else {
           Recipes.find((err, response) => {
             if (err) {
@@ -58,8 +56,7 @@ module.exports = {
             } else {
               res.status(200).send(response);
             }
-          })
-          .sort({ missingIngredients: 'asc'})
+          }).sort({ missingIngredients: 'asc'});
         }
       })
     })
@@ -67,21 +64,19 @@ module.exports = {
   findRecipe: (req, res) => {
     const userId = Number(req.params.recipeId);
 
-    Recipes.findOne({ id: userId})
-      .then(recipe => {
-        res.status(200).send(recipe)
-      })
-      .catch(err => {
-        res.status(404).send('could not find posts', err)
-      })
+    Recipes.findOne({ id: userId })
+    .then(recipe => {
+      res.status(200).send(recipe);
+    }).catch(err => {
+      res.status(404).send(err);
+    })
   },
   deleteAll: (req, res) => {
     Recipes.deleteMany({})
-    .then(function() {
-      console.log('data deleted');
-      res.status(200)
+    .then(() => {
+      res.status(200);
     }).catch(err => {
-      res.status(400)
+      res.status(400);
     })
   }
 }

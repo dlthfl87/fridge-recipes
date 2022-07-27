@@ -1,6 +1,6 @@
 {
-  "name": "fridge-recipes",
-  "version": "1.0.0",
+  "name": "happy-fridge",
+  "version": "2.0.0",
   "description": "This product offers a solution to reducing food waste and the environmental impact we make by offering a variety of recipes options based on the ingredients you have stocked in your home.",
   "main": "server/index.js",
   "scripts": {
@@ -10,9 +10,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dlthfl87/fridge-recipes.git"
+    "url": "git+https://github.com/leesoli/happy-fridge-version2.0.git"
   },
-  "author": "Anna Lee",
+  "author": "Soli Anna Lee",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dlthfl87/fridge-recipes/issues"
@@ -28,6 +28,7 @@
     "css-loader": "^6.2.0",
     "mongodb": "^4.7.0",
     "mongoose": "^6.4.7",
+    "react": "^17.0.2",
     "react-bootstrap": "^2.4.0",
     "react-icons": "^4.4.0",
     "react-infinite-scroll-component": "^6.1.0",
@@ -40,7 +41,6 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "nodemon": "^2.0.12",
-    "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
 }

@@ -22,14 +22,14 @@ export default function Recipe () {
 
           <div className="current-recipe-summary">{currentRecipe.summary.split('.').splice(0, 4).join('.').concat('.')}</div>
 
-          <div>By
+          {currentRecipe.sourceName && <div>By
             <a
               href={`${currentRecipe.sourceLink}`}
               className="current-recipe-source"
             >
               {currentRecipe.sourceName}
             </a>
-          </div>
+          </div>}
 
           <img className="current-recipe-image" src={currentRecipe.image} />
 

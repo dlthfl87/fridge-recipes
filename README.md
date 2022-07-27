@@ -17,16 +17,15 @@ npm build
 ```
 
 ## Navigating the Application
-On the homepage, click on the Find Recipe button to display the sidebar containing different recipes.You will be prompted to choose all the ingredients you have on hand with the exception of pantry items.
+On the homepage, click on the Find Recipe button on the middle of the screen or Recipe on the menu bar to display the sidebar. Choose all the ingredients you have on hand with the exception of pantry items.
 
 Once you have made your selection, click the Find Recipe button.
 
 Based on the ingredients you have chosen, you will be given a list of recipes in the order of the least additional ingredients needed.
 
 
+## Credits
 
- <!-- Click the show more button on the bottom to view additional recipes. -->
+Homepage Photo by [Jo Lanta](https://unsplash.com/@jo_lanta?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on Unsplash
 
-
- <!-- Photo by <a href="https://unsplash.com/@jo_lanta?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jo Lanta</a> on <a href="https://unsplash.com/s/photos/food-waste?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-   -->
+About Page Photo by [Mike Dorner](https://unsplash.com/@dorner?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on Unsplash

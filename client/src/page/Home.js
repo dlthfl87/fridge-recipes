@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback} from 'react';
 import { Link } from 'react-router-dom';
 import { IoTimerOutline } from 'react-icons/io5';
+import {switchBackground} from '../helpers';
 
 export default function Home (props) {
   const observer = useRef(null);
@@ -16,10 +17,6 @@ export default function Home (props) {
     if (node) observer.current.observe(node);
   }, [props.loading, props.hasMore])
 
-  function removeBackground() {
-    document.body.classList.add('remove-background');
-  }
-
   return (
     <main className="recipe-page">
       <h2 className="recipes-list-title">Recommended Recipes for You</h2>
@@ -30,7 +27,7 @@ export default function Home (props) {
                 <Link
                   to={`/recipes/${recipe.id}`}
                   key={recipe.id}
-                  onClick={removeBackground}
+                  onClick={() => switchBackground(false)}
                   ref={lastRecipe}
                 >
                   <div className="recipe-container">
@@ -60,7 +57,7 @@ export default function Home (props) {
                 <Link
                   to={`/recipes/${recipe.id}`}
                   key={recipe.id}
-                  onClick={removeBackground}
+                  onClick={() => switchBackground(false)}
                 >
                   <div className="recipe-container">
                     <img

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { IoMdExit } from "react-icons/io";
+import { switchBackground, closeSidebar } from '../helpers';
 
 export default function RecipeCheckbox (props) {
   const vegetables = Object.keys(props.formData.vegetableOptions);
@@ -7,20 +8,12 @@ export default function RecipeCheckbox (props) {
   const fruits = Object.keys(props.formData.fruitOptions);
   const meats = Object.keys(props.formData.meatOptions);
 
-  function removeBackground() {
-    document.body.classList.add('remove-background');
-  }
-
-  function closeSidebar() {
-    document.body.classList.remove('open-sidebar');
-  }
-
   return (
     <div>
       <form
         className="form"
         onSubmit={(e) => {
-          removeBackground();
+          switchBackground(false);
           props.handleSubmit(e);
         }}
       >
