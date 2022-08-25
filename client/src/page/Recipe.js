@@ -31,7 +31,10 @@ export default function Recipe () {
             </a>
           </div>}
 
-          <img className="current-recipe-image" src={currentRecipe.image} />
+          <img
+            className="current-recipe-image"
+            alt={`image of ${currentRecipe.title}`}
+            src={currentRecipe.image} />
 
           <div className="current-recipe-about">
             <span className="current-recipe-about__title">About this Recipe</span>

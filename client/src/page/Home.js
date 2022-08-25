@@ -34,6 +34,7 @@ export default function Home (props) {
                     <img
                       className="recipe-image"
                       src={recipe.image}
+                      alt={`thumbnail image of ${recipe.title}`}
                     />
 
                     <div
@@ -61,6 +62,7 @@ export default function Home (props) {
                 >
                   <div className="recipe-container">
                     <img
+                      alt={`thumbnail image of ${recipe.title}`}
                       className="recipe-image"
                       src={recipe.image}
                     />

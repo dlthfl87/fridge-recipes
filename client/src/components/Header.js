@@ -11,8 +11,12 @@ export default function Header () {
         <button
           className="nav-toggle"
           onClick={toggleNav}
+          aria-label="Menu Icon"
         >
-          <span className="nav-icon"></span>
+          <span
+            className="nav-icon"
+            aria-hidden="true"
+          ></span>
         </button>
         <ul className="nav-list">
           <li

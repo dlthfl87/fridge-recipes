@@ -41,7 +41,7 @@ span {
 }
 
 .active {
-  border-bottom: 1px solid var(--clr-light);
+  border-bottom: 1px solid #5d1212;
 }
 
 .active a:hover,
@@ -82,7 +82,7 @@ a,
 .active a:hover,
 .active a:focus,
 .header {
-  color: var(--clr-light);
+  color: #5d1212;
 }
 
 .remove-background .header,
@@ -242,7 +242,7 @@ a,
 .header {
   display: flex;
   flex-direction: column;
-  background: url('./images/mike-dorner-sf_1ZDA1YFw-unsplash.jpg');
+  background: url('./images/mike-dorner.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -348,7 +348,7 @@ a,
 .nav-icon::before {
   height: 2px;
   width: 2.5em;
-  background-color: var(--clr-light);
+  background-color: #5d1212;
 }
 
 .nav-icon::before {
@@ -674,7 +674,7 @@ a,
 }
 
 .about-photo {
-  background: url('./images/jo-lanta-F5rDfiXEUOA-unsplash.jpg');
+  background: url('./images/jo-lanta.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
